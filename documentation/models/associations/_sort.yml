@@ -1,0 +1,4 @@
+belongs_to
+has_many
+has_and_belongs_to_many
+dependent_associations
