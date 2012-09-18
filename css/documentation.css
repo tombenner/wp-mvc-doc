@@ -64,3 +64,8 @@ body #content h2 {
   font-size:inherit;
   display:inline;
 }
+/*Customizations*/
+.addthis-container {
+  float:right;
+  margin-top:50px;
+}
