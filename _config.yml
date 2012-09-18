@@ -1,5 +1,0 @@
-markdown: rdiscount
-pygments: true
-permalink: /:title.html
-name: "WP MVC"
-baseurl: /wp-mvc
