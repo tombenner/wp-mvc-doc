@@ -1,2 +1,2 @@
 ---
-See {% doc_link controller/controller_methods/load_helper %}.
+See {% doc_link controllers/controller_methods/load_helper %}.
