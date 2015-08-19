@@ -5,4 +5,35 @@ Documentation for [WP MVC](https://github.com/tombenner/wp-mvc)
 Description
 -----------
 
-This documentation can be viewed [here](https://tombenner.github.com/wp-mvc-doc).  It runs on [JDoc](https://github.com/tombenner/jdoc); to edit this documentation, please refer to the JDoc README for details on how to use JDoc.
+This documentation can be viewed [here](http://wpmvc.org).  It runs on [JDoc](https://github.com/tombenner/jdoc).
+
+Usage
+-----
+
+### Local Development
+
+Clone the repo recursively:
+
+```bash
+git clone --recursive git://github.com/tombenner/wp-mvc-doc
+```
+
+And run Jekyll to build the site and start serving it:
+
+```bash
+jekyll --server
+```
+
+You may need to modify the `baseurl` value in `_config.yml`.
+
+### Deployment
+
+[wpmvc.org](http://wpmvc.org) points to the this repo's GitHub Pages instance, so to deploy, you'll want create the static site, update the `gh-pages` branch with it, then push:
+
+First, run Jekyll to create the static site in the `_site` directory:
+
+```bash
+jekyll --server
+```
+
+Copy the contents of the `_site` directory, check out the `gh-pages` branch, then past the contents of the `_site` directory into the repo's root directory. Commit and push to master.
