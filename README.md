@@ -38,4 +38,4 @@ First, run Jekyll to create the static site in the `_site` directory:
 jekyll serve
 ```
 
-Copy the contents of the `_site` directory, check out the `gh-pages` branch, then past the contents of the `_site` directory into the repo's root directory. Commit and push to master.
+Copy the contents of the `_site` directory, check out the `gh-pages` branch, then paste the contents of the `_site` directory into the repo's root directory. Commit and push.
