@@ -51,10 +51,9 @@
 
 <p>This simply returns a boolean signifying whether or not the current page is being rendered by a WP MVC-based plugin.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">echo</span> <span class="nx">is_mvc_page</span><span class="p">()</span> <span class="o">?</span> <span class="s1">&#39;WP MVC page!&#39;</span> <span class="o">:</span> <span class="s1">&#39;Not a WP MVC page!&#39;</span><span class="p">;</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_model.html">View alone</a><h3>mvc_model</h3></div>
@@ -62,11 +61,10 @@
 
 <p>This allows you to easily use a <a class="documentation-link" href="/documentation/models">WP MVC model</a> from elsewhere in WP (e.g. in a theme).  Pass the name of a model to it, and it will return an instantiation of the model that has all of the standard model methods and attributes.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$venues</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_public_url.html">View alone</a><h3>mvc_public_url</h3></div>
@@ -74,7 +72,7 @@
 
 <p>This returns a URL the corresponds to the routing options that are passed to it.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/venues/</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">));</span>
 
@@ -84,27 +82,24 @@
 <span class="c1">// http://mysite.com/venues/my_action/1</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;my_action&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Ideally, for <code>'show'</code> actions, you would pass an object, as this allows <a class="documentation-link" href="/documentation/routing/pretty_urls.html">Pretty URLs</a> to be used if <a class="documentation-link" href="/documentation/models/model_methods/to_url.html"><code>to_url()</code></a> is defined in the model:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/documentation/5/creating-database-tables/</span>
 <span class="nv">$documentation_node_model</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DocumentationNode</span><span class="p">();</span>
 <span class="nv">$documentation_node</span> <span class="o">=</span> <span class="nv">$documentation_node_model</span><span class="o">-&gt;</span><span class="na">find_by_id</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;object&#39;</span> <span class="o">=&gt;</span> <span class="nv">$documentation_node</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Note: If you are looking to make a link to a MVC page from within an MVC page, you may want to use <a class="documentation-link" href="/documentation/helpers/core_helpers/html.html">the HTML helper's <code>link()</code> method</a>:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">(</span><span class="s1">&#39;All Venues&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">))</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_admin_url.html">View alone</a><h3>mvc_admin_url</h3></div>
@@ -112,7 +107,7 @@
 
 <p>This behaves like <a class="documentation-link" href="/documentation/functions/mvc_public_url.html"><code>mvc_public_url</code></a>, except that it provides the URL to admin MVC pages instead of public ones.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/wp-admin/admin.php?page=mvc_venues</span>
 <span class="k">echo</span> <span class="nx">mvc_admin_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">));</span>
 
@@ -122,8 +117,7 @@
 <span class="c1">// http://mysite.com/wp-admin/admin.php?page=mvc_venues-edit&amp;id=1</span>
 <span class="k">echo</span> <span class="nx">mvc_admin_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;edit&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_css_url.html">View alone</a><h3>mvc_css_url</h3></div>
@@ -131,7 +125,7 @@
 
 <p>This returns the URL of a CSS style sheet that's in the specified plugin's <code>app/public/</code> directory.  If a file extension isn't given, a <code>.css</code> is appended, but this automatic behavior can be bypassed by setting the <code>add_extension</code> option to <code>false</code>, as shown below.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// This will return a URL that looks like the following:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/css/my_style.css</span>
 <span class="k">echo</span> <span class="nx">mvc_css_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_style&#39;</span><span class="p">);</span>
@@ -139,8 +133,7 @@
 <span class="c1">// This will prevent the &quot;.css&quot; from being appended:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/css/my_style</span>
 <span class="k">echo</span> <span class="nx">mvc_css_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_style&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;add_extension&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_js_url.html">View alone</a><h3>mvc_js_url</h3></div>
@@ -148,7 +141,7 @@
 
 <p>This returns the URL of a JavaScript file that's in the specified plugin's <code>app/public/</code> directory.  If a file extension isn't given, a <code>.js</code> is appended, but this automatic behavior can be bypassed by setting the <code>add_extension</code> option to <code>false</code>, as shown below.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// This will return a URL that looks like the following:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/js/my_script.js</span>
 <span class="k">echo</span> <span class="nx">mvc_js_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_script&#39;</span><span class="p">);</span>
@@ -156,8 +149,7 @@
 <span class="c1">// This will prevent the &quot;.js&quot; from being appended:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/js/my_script</span>
 <span class="k">echo</span> <span class="nx">mvc_js_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_script&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;add_extension&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_render_to_string.html">View alone</a><h3>mvc_render_to_string</h3></div>
@@ -165,7 +157,7 @@
 
 <p>This lets you capture the output of a view as a string.  The first argument is the view path, and the second is an array of variables that the view will use (this is optional).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Somewhere in the theme:</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span>
@@ -180,8 +172,7 @@
 <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$objects</span> <span class="k">as</span> <span class="nv">$object</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="x">  &lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">venue_link</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
-<span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/functions/mvc_get_plugins.html">View alone</a><h3>mvc_get_plugins</h3></div>
@@ -189,12 +180,11 @@
 
 <p>This returns an array listing the currently active WP MVC-based plugins.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// This will return an array that looks like the following:</span>
 <span class="c1">// Array ( [0] =&gt; events-calendar-example [1] =&gt; hierarchical-documentation )</span>
 <span class="nb">print_r</span><span class="p">(</span><span class="nx">mvc_get_plugins</span><span class="p">());</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -46,7 +46,7 @@
   <h2>average</h2>
   <p>Returns the average of the values of a column (using a <code>AVERAGE()</code> MySQL query).  An optional second argument can be used to specify conditions or other query qualifiers.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// If the Venue table has columns &#39;event_count&#39; and &#39;is_public&#39;:</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$event_count_average</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">average</span><span class="p">(</span><span class="s1">&#39;event_count&#39;</span><span class="p">);</span>
@@ -55,8 +55,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

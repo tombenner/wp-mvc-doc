@@ -58,7 +58,7 @@
 
 <p>You can thus make associations between your app's models and WordPress tables.  For example, you could define an Organization model that has_many members who are WordPress users (i.e. records in the wp_users table):</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Organization</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$has_many</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -68,13 +68,12 @@
   <span class="p">);</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Then, in the controller, you could get the list of members for an organization with <code>$organization-&gt;members</code>:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">OrganizationsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
 
   <span class="k">public</span> <span class="k">function</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
@@ -88,8 +87,7 @@
 
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

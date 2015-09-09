@@ -46,7 +46,7 @@
   <h2>after_find</h2>
   <p>To process an object immediately before it is returned from a <code>find()</code> or <code>paginate()</code> call, define <code>after_find()</code>.  This can be useful if you want to always add a commonly-needed property to objects that is something other than the values of the model's table columns.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">public</span> <span class="k">function</span> <span class="nf">after_find</span><span class="p">(</span><span class="nv">$object</span><span class="p">)</span> <span class="p">{</span>
@@ -64,8 +64,7 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -49,14 +49,13 @@
 
 <p>To define one or more belongs to associations, set the <code>belongs_to</code> property.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$belongs_to</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>In this example, the events table should have a <code>venue_id</code> column, which will be used as the foreign key.</p>
@@ -65,7 +64,7 @@
 
 <p>A custom foreign key can also be defined:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$belongs_to</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -75,8 +74,7 @@
   <span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/associations/has_many.html">View alone</a><h3>Has Many</h3></div>
@@ -84,14 +82,13 @@
 
 <p>To define one or more has many associations, set the <code>has_many</code> property.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$has_many</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Event&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/associations/has_and_belongs_to_many.html">View alone</a><h3>Has and Belongs To Many</h3></div>
@@ -101,7 +98,7 @@
 
 <p>WP MVC will attempt a guess at the join table, but you may want to specify it (use <code>{prefix}</code> in the table name as a token that will be replaced by <code>$wpdb-&gt;prefix</code>).  You can also specify what fields are retrieved from the table.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   <span class="k">var</span> <span class="nv">$has_and_belongs_to_many</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;Speaker&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -110,8 +107,7 @@
     <span class="p">)</span>
   <span class="p">);</span>
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/associations/dependent_associations.html">View alone</a><h3>Dependent Associations</h3></div>
@@ -121,7 +117,7 @@
 
 <p>In the following example, if a List object is deleted, all of its ListItems will be deleted, too.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">List</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$has_many</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -131,8 +127,7 @@
   <span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -49,7 +49,7 @@
 
 <p>To create pagination links in a view, use <code>$this-&gt;pagination();</code>.  This needs to be called after <code>paginate()</code> and <code>set_pagination()</code> calls, as shown below, have been made in the controller.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">PublicController</span> <span class="p">{</span>
@@ -65,8 +65,7 @@
 <span class="c1">// views/venues/search.php</span>
 
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pagination</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p><code>$this-&gt;pagination()</code> simply returns <code>paginate_links($this-&gt;pagination);</code>, where <a href="http://codex.wordpress.org/Function_Reference/paginate_links"><code>paginate_links()</code></a> is a WordPress function.  So, to modify the output behavior of the pagination links, either modify <code>$this-&gt;pagination</code> (which is set in <code>$this-&gt;set_pagination()</code> or just use <code>paginate_links()</code> directly.<div class="doc-child-header"><a class="doc-child-link" href="/documentation/views/view_methods/render_view.html">View alone</a><h3>render_view</h3></div>See <a class="documentation-link" href="/documentation/views/views_within_views.html">Views Within Views</a>.</p>

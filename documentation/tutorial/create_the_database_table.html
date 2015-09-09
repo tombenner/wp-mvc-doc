@@ -46,7 +46,7 @@
   <h2>Create the Database Table</h2>
   <p>To create a table to store our venues, open up <code>plugins/venue-listing/venue_listing_loader.php</code>.  The <code>activate()</code> method is called when this plugin is activated, so we'll want to create our table here using WordPress's <a href="http://codex.wordpress.org/Creating_Tables_with_Plugins#Creating_or_Updating_the_Table">dbDelta()</a> function.  Add a few lines to <code>activate()</code> so that it looks like this:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">function</span> <span class="nf">activate</span><span class="p">()</span> <span class="p">{</span>
 
   <span class="c1">// This call needs to be made to activate this app within WP MVC</span>
@@ -78,8 +78,7 @@
   <span class="nx">dbDelta</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Now activate the plugin, and the table will be created.</p>

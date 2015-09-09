@@ -46,7 +46,7 @@
   <h2>mvc_admin_url</h2>
   <p>This behaves like <a class="documentation-link" href="/documentation/functions/mvc_public_url.html"><code>mvc_public_url</code></a>, except that it provides the URL to admin MVC pages instead of public ones.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/wp-admin/admin.php?page=mvc_venues</span>
 <span class="k">echo</span> <span class="nx">mvc_admin_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">));</span>
 
@@ -56,8 +56,7 @@
 <span class="c1">// http://mysite.com/wp-admin/admin.php?page=mvc_venues-edit&amp;id=1</span>
 <span class="k">echo</span> <span class="nx">mvc_admin_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;edit&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

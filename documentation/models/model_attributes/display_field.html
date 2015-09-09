@@ -46,7 +46,7 @@
   <h2>display_field</h2>
   <p>The name of the field which will be used to textually represent an object in various functions that assume that such a field is available.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// models/venue.php:</span>
 
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
@@ -59,8 +59,7 @@
 
 <span class="c1">// The following will output an anchor tag that uses $object-&gt;name for its text.</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">venue_link</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The <code>display_field</code> value will always be available in the <code>__name</code> property of an object (<code>$object-&gt;__name</code>), allowing you to represent an object textually without knowing exactly what property should be used.</p>
@@ -69,7 +68,7 @@
 
 <p>Note that fields that are set in <code>after_find()</code> can also be used for <code>display_field</code>, in case the displayed value should be something other than the value of a specific column.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   
@@ -93,8 +92,7 @@
   
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -48,15 +48,14 @@
 
 <p>For example, HtmlHelper is a core helper that is included by default, so to use it to create a link in a view, you would do something like this:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">(</span><span class="s1">&#39;Show all venues&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">(</span><span class="s1">&#39;Show all venues&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <h3>Using a non-core helper</h3>
 
 <p>To use a helper that isn't a core helper, you'll just need to load it in the controller before using it in the view.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/documentation_nodes_controller.php</span>
 <span class="k">class</span> <span class="nc">DocumentationNodesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -69,8 +68,7 @@
 
 <span class="c1">// views/documentation_nodes/show.php</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">documentation</span><span class="o">-&gt;</span><span class="na">parse_markdown</span><span class="p">(</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">content</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -46,7 +46,7 @@
   <h2>count</h2>
   <p>Returns the number of records matching the query (using a <code>COUNT()</code> MySQL query).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$total_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
 <span class="nv">$public_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
@@ -54,8 +54,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -46,14 +46,13 @@
   <h2>Default Custom Post Type</h2>
   <p>Setting <code>$wp_post = array('post_type' =&gt; true);</code> behaves the same as above, but now a <a href="http://codex.wordpress.org/Post_Types#Custom_Types">Custom Post Type</a> will be created.  By default, this post type is kept fairly private (e.g. it doesn't show up in Navigation Menus), but this can be changed by customizing it (see the next section).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$wp_post</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;post_type&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

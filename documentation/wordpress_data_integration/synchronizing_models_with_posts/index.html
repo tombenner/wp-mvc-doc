@@ -55,26 +55,24 @@
 
 <p>Setting <code>$wp_post = true;</code> will automatically create and update a post for each venue; the posts will have a <code>post_type</code> value of '<code>mvc_venue</code>', but there won't be a <a href="http://codex.wordpress.org/Post_Types#Custom_Types">Custom Post Type</a> for venues.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$wp_post</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The post of each venue can then be accessed using <code>$venue-&gt;post</code>, and this will have all of the columns of <code>wp_posts</code> as attributes (e.g. <code>$venue-&gt;post-&gt;post_title</code> returns the post's title).<div class="doc-child-header"><a class="doc-child-link" href="/documentation/wordpress_data_integration/synchronizing_models_with_posts/default_custom_post_type.html">View alone</a><h3>Default Custom Post Type</h3></div>Setting <code>$wp_post = array('post_type' =&gt; true);</code> behaves the same as above, but now a <a href="http://codex.wordpress.org/Post_Types#Custom_Types">Custom Post Type</a> will be created.  By default, this post type is kept fairly private (e.g. it doesn't show up in Navigation Menus), but this can be changed by customizing it (see the next section).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$wp_post</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;post_type&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/wordpress_data_integration/synchronizing_models_with_posts/customized_custom_post_type.html">View alone</a><h3>Customized Custom Post Type</h3></div>
@@ -97,7 +95,7 @@
 </ul>
 
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$wp_post</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -119,8 +117,7 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

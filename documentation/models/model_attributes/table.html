@@ -48,14 +48,13 @@
 
 <p>If you set this value, you'll most likely want to include the token <code>{prefix}</code>at the beginning of the string, which will be replaced with the current value of $wpdb->prefix.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;{prefix}my_venues&#39;</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

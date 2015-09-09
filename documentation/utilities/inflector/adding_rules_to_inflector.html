@@ -46,22 +46,20 @@
   <h2>Adding Rules To Inflector</h2>
   <p><code>MvcInflector</code> accounts for most nonstandard pluralizations (e.g. "person" to "people"), but you can add additional rules using <code>MvcInflect::rules()</code>.  These should typically be placed in <code>app/config/bootstrap.php</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nx">MvcInflector</span><span class="o">::</span><span class="na">rules</span><span class="p">(</span><span class="s1">&#39;singular&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;rules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;/^(bil)er$/i&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="s1">&#39;/^(inflec|contribu)tors$/i&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\1ta&#39;</span><span class="p">),</span>
     <span class="s1">&#39;uninflected&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;singulars&#39;</span><span class="p">),</span>
     <span class="s1">&#39;irregular&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;spins&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;spinor&#39;</span><span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nx">MvcInflector</span><span class="o">::</span><span class="na">rules</span><span class="p">(</span><span class="s1">&#39;plural&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;irregular&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;phylum&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;phyla&#39;</span><span class="p">)));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -46,7 +46,7 @@
   <h2>find</h2>
   <p>The <code>find()</code> method is the all-purpose method for retrieving data from a model.  It takes a single argument, an associative array of options for the find.  Here's an example that shows the available options (it isn't a practical example, though):</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/events_controller.php</span>
 <span class="k">class</span> <span class="nc">EventsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -70,8 +70,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <h4>joins</h4>
@@ -94,7 +93,7 @@
 
 <p>An array of conditions for the WHERE part of the query.  Conditions are joined with an AND by default, but OR conditions can be done like this:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Find all Events that are active or are happening on or after today</span>
 <span class="nv">$objects</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Event</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
   <span class="s1">&#39;conditions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -104,8 +103,7 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>To group conditions together, use an <code>'AND'</code> or <code>'OR'</code> in the same way that the <code>'OR'</code> above is used.</p>

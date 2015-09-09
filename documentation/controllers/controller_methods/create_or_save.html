@@ -46,7 +46,7 @@
   <h2>create_or_save</h2>
   <p>The <code>add</code> and <code>edit</code> actions in WP MVC's default admin controllers use <code>create_or_save()</code> to either create or update records using data submitted from a form.  <code>create_or_save()</code> checks <code>$this-&gt;params['data']</code> to see if data related to the controller's model is present.  If it is and an ID value is set, the record with that ID is updated; if it is and an ID is not set, a record is inserted with the submitted data.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">AdminVenuesController</span> <span class="k">extends</span> <span class="nx">MvcAdminController</span> <span class="p">{</span>
 
@@ -62,8 +62,7 @@
 
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

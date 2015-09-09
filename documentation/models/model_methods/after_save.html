@@ -46,7 +46,7 @@
   <h2>after_save</h2>
   <p>To always process an object immediately after it is saved, define <code>after_save()</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   <span class="k">public</span> <span class="k">function</span> <span class="nf">after_save</span><span class="p">(</span><span class="nv">$object</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">update_sort_name</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span>
@@ -57,14 +57,13 @@
     <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
     <span class="nv">$article</span> <span class="o">=</span> <span class="s1">&#39;The&#39;</span><span class="p">;</span>
     <span class="nv">$article_</span> <span class="o">=</span> <span class="nv">$article</span><span class="o">.</span><span class="s1">&#39; &#39;</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">strcasecmp</span><span class="p">(</span><span class="nx">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">)),</span> <span class="nv">$article_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="nv">$article</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">strcasecmp</span><span class="p">(</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">)),</span> <span class="nv">$article_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="nv">$article</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">__id</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;sort_name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$sort_name</span><span class="p">));</span>
   <span class="p">}</span> 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

@@ -49,7 +49,7 @@
 
 <p>Use <code>set()</code> to make variables from the controller available in the view.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -65,8 +65,7 @@
 <span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// views/venues/show.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span>
-</code></pre></div>
+<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/set_object.html">View alone</a><h3>set_object</h3></div>
@@ -74,7 +73,7 @@
 
 <p>In an action where an <code>id</code> URL parameter is available (e.g. the conventional <code>show</code> action, where the <code>id</code> parameter is passed from the URL), calling <code>$this-&gt;set_object()</code> will find the object that has the specified id from the controller's native model and make it available to the view as <code>$object</code> (using the equivalent of <code>$this-&gt;set('object', $object)</code>).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -88,8 +87,7 @@
 <span class="cp">&lt;?php</span>
 <span class="c1">// views/venues/show.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span>
-</code></pre></div>
+<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/set_objects.html">View alone</a><h3>set_objects</h3></div>
@@ -99,7 +97,7 @@
 
 <p><code>set_objects()</code> will handle pagination behind the scenes.  If a URL param named <code>page</code> (or in an admin action a URL named <code>page_num</code>) is set, <code>set_objects()</code> will use that to properly paginate the collection.  It also calls <code>$this-&gt;set_pagination($collection);</code>, which will allow for <a class="documentation-link" href="/documentation/views/view_methods/pagination.html">pagination links to be displayed in the view</a>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -112,8 +110,7 @@
 <span class="c1">// views/venues/index.php</span>
 <span class="c1">// This will print_r() all of the retrieve objects</span>
 <span class="nb">print_r</span><span class="p">(</span><span class="nv">$objects</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/set_pagination.html">View alone</a><h3>set_pagination</h3></div>
@@ -121,7 +118,7 @@
 
 <p>To allow for <a class="documentation-link" href="/documentation/views/view_methods/pagination.html">pagination links to easily be created in a view</a>, call <code>$this-&gt;set_pagination($collection);</code> using a collection that is returned from a <code>paginate()</code> call on a model.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">PublicController</span> <span class="p">{</span>
@@ -137,13 +134,12 @@
 <span class="c1">// views/venues/search.php</span>
 
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pagination</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p><code>set_pagination()</code> processes the collection and sets <code>$this-&gt;pagination</code> to an appropriate array that will be used in <a href="http://codex.wordpress.org/Function_Reference/paginate_links"><code>paginate_links()</code></a> within <code>$this-&gt;pagination();</code> in the view.<div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/load_helper.html">View alone</a><h3>load_helper</h3></div>To use a helper in a view, you'll need to call <code>$this-&gt;load_helper()</code> in the controller.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -174,8 +170,7 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/load_model.html">View alone</a><h3>load_model</h3></div>
@@ -183,7 +178,7 @@
 
 <p>Use <code>load_model()</code> if you want to use a model other than the controller's native model.  To load multiple models, use <a class="documentation-link" href="/documentation/controllers/controller_methods/load_models.html">load_models()</a>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -193,8 +188,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/load_models.html">View alone</a><h3>load_models</h3></div>
@@ -202,7 +196,7 @@
 
 <p>Use <code>load_models()</code> if you want to use models other than the controller's native model.  To load a single model, use <a class="documentation-link" href="/documentation/controllers/controller_methods/load_model.html">load_model()</a>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -213,8 +207,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/redirect.html">View alone</a><h3>redirect</h3></div>
@@ -222,11 +215,10 @@
 
 <p>To redirect to another page while inside of a controller, use <code>redirect()</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">admin_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">));</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/flash.html">View alone</a><h3>flash</h3></div>
@@ -234,7 +226,7 @@
 
 <p>Use <code>flash()</code> to set a message or warning that will be displayed to the user.  The text will be displayed by <code>display_flash()</code>, which is called in the default admin layout (<code>views/admin/layouts/admin.php</code>), but can be called elsewhere if desired.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="c1">// controllers/admin/admin_venues_controller.php</span>
 
@@ -266,8 +258,7 @@
 
 <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_main_view</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
-<span class="x">&lt;/div&gt;</span>
-</code></pre></div>
+<span class="x">&lt;/div&gt;</span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_methods/create_or_save.html">View alone</a><h3>create_or_save</h3></div>
@@ -275,7 +266,7 @@
 
 <p>The <code>add</code> and <code>edit</code> actions in WP MVC's default admin controllers use <code>create_or_save()</code> to either create or update records using data submitted from a form.  <code>create_or_save()</code> checks <code>$this-&gt;params['data']</code> to see if data related to the controller's model is present.  If it is and an ID value is set, the record with that ID is updated; if it is and an ID is not set, a record is inserted with the submitted data.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">AdminVenuesController</span> <span class="k">extends</span> <span class="nx">MvcAdminController</span> <span class="p">{</span>
 
@@ -291,8 +282,7 @@
 
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

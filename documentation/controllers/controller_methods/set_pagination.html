@@ -46,7 +46,7 @@
   <h2>set_pagination</h2>
   <p>To allow for <a class="documentation-link" href="/documentation/views/view_methods/pagination.html">pagination links to easily be created in a view</a>, call <code>$this-&gt;set_pagination($collection);</code> using a collection that is returned from a <code>paginate()</code> call on a model.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">PublicController</span> <span class="p">{</span>
@@ -62,8 +62,7 @@
 <span class="c1">// views/venues/search.php</span>
 
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pagination</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p><code>set_pagination()</code> processes the collection and sets <code>$this-&gt;pagination</code> to an appropriate array that will be used in <a href="http://codex.wordpress.org/Function_Reference/paginate_links"><code>paginate_links()</code></a> within <code>$this-&gt;pagination();</code> in the view.</p>

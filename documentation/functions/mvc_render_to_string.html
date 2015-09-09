@@ -46,7 +46,7 @@
   <h2>mvc_render_to_string</h2>
   <p>This lets you capture the output of a view as a string.  The first argument is the view path, and the second is an array of variables that the view will use (this is optional).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Somewhere in the theme:</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span>
@@ -61,8 +61,7 @@
 <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$objects</span> <span class="k">as</span> <span class="nv">$object</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="x">  &lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">venue_link</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
-<span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

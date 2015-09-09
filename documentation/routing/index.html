@@ -46,12 +46,11 @@
   <h2>Routing</h2>
   <p>By default, WP MVC sets up the following public routes:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">public_connect</span><span class="p">(</span><span class="s1">&#39;{:controller}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">));</span>
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">public_connect</span><span class="p">(</span><span class="s1">&#39;{:controller}/{:id:[\d]+}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;show&#39;</span><span class="p">));</span>
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">public_connect</span><span class="p">(</span><span class="s1">&#39;{:controller}/{:action}/{:id:[\d]+}&#39;</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The first line makes URLs like <code>/venues/</code> use <code>array('controller' =&gt; 'venues', 'action' =&gt; 'index')</code>.</p>
@@ -68,7 +67,7 @@
 
 <p>To set up your own public routing and/or admin AJAX routing, add a file at <code>app/config/routes.php</code> containing code like the following:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="c1">// app/config/routes.php</span>
 
@@ -82,13 +81,12 @@
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">admin_ajax_connect</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;admin_documentation_nodes&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;update_tree&#39;</span><span class="p">));</span>
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">admin_ajax_connect</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;admin_documentation_nodes&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;preview_content&#39;</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The second <code>admin_ajax_connect()</code> call above allows for an AJAX call like the following to be made:</p>
 
-<div class="highlight"><pre><code class="js"><span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
   
   <span class="c1">// Data to send to the AJAX call</span>
   <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -101,8 +99,7 @@
     <span class="c1">// Handle the response</span>
   <span class="p">});</span>
   
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 
 </div>

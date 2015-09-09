@@ -48,7 +48,7 @@
 
 <p>The <code>'type'</code> attribute can be <code>'text'</code>, <code>'textarea'</code>, <code>'checkbox'</code>, or <code>'select'</code> (for which you should provide <code>'options'</code> or <code>'options_method'</code>).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// app/settings/documentation_settings.php</span>
 <span class="k">class</span> <span class="nc">DocumentationSettings</span> <span class="k">extends</span> <span class="nx">MvcSettings</span> <span class="p">{</span>
 
@@ -86,16 +86,14 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>To retrieve the value of the <code>'admin_version_id'</code> setting below, you would use <code>mvc_setting()</code> like this:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$admin_version_id</span> <span class="o">=</span> <span class="nx">mvc_setting</span><span class="p">(</span><span class="s1">&#39;DocumentationSettings&#39;</span><span class="p">,</span> <span class="s1">&#39;admin_version_id&#39;</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

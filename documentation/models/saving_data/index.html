@@ -49,7 +49,7 @@
 
 <p>To create a record in the database for a model, call <code>create()</code>.  <code>create()</code> is most commonly used with data submitted from a form that was made using FormHelper:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">AdminVenuesController</span> <span class="k">extends</span> <span class="nx">AdminMvcController</span> <span class="p">{</span>
 
   <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> <span class="p">{</span>
@@ -67,13 +67,12 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Please note that the workflow above can be handled behind the scenes using <code>create_or_save()</code>.<div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/saving_data/save.html">View alone</a><h3>save</h3></div>To save a record in the database for a model, call <code>save()</code>.  <code>save()</code> will check for the presence of the model's primary key; if it is present, it will update the record with that ID; if it isn't present, it will create a new record.  <code>save</code> is most commonly used with data submitted from a form that was made using FormHelper:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">AdminVenuesController</span> <span class="k">extends</span> <span class="nx">AdminMvcController</span> <span class="p">{</span>
 
   <span class="k">public</span> <span class="k">function</span> <span class="nf">edit</span><span class="p">()</span> <span class="p">{</span>
@@ -90,13 +89,12 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Please note that the workflow above can be handled behind the scenes using <code>create_or_save()</code>.<div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/saving_data/update.html">View alone</a><h3>update</h3></div>To update one or more fields of a record, use <code>update()</code>.  The first argument should be the ID of the record, and the second argument should be an array of the data that will be updated.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   
@@ -108,16 +106,15 @@
     <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
     <span class="nv">$article</span> <span class="o">=</span> <span class="s1">&#39;The&#39;</span><span class="p">;</span>
     <span class="nv">$article_</span> <span class="o">=</span> <span class="nv">$article</span><span class="o">.</span><span class="s1">&#39; &#39;</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">strcasecmp</span><span class="p">(</span><span class="nx">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">)),</span> <span class="nv">$article_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="nv">$article</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">strcasecmp</span><span class="p">(</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">)),</span> <span class="nv">$article_</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$sort_name</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$sort_name</span><span class="p">,</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$article_</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="nv">$article</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">__id</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;sort_name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$sort_name</span><span class="p">));</span>
   <span class="p">}</span>
   
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/saving_data/update_all.html">View alone</a><h3>update_all</h3></div>
@@ -125,7 +122,7 @@
 
 <p>To update one or more fields of multiple records, use <code>update_all()</code>.  The first argument should be an array of the data that will be updated, and the second argument, which is optional, can be an array of options.  The commonly used option would be <code>conditions</code>, which would make the update only affect records that match the specified conditions.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   
@@ -138,8 +135,7 @@
   
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/saving_data/insert.html">View alone</a><h3>insert</h3></div>

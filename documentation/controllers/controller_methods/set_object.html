@@ -46,7 +46,7 @@
   <h2>set_object</h2>
   <p>In an action where an <code>id</code> URL parameter is available (e.g. the conventional <code>show</code> action, where the <code>id</code> parameter is passed from the URL), calling <code>$this-&gt;set_object()</code> will find the object that has the specified id from the controller's native model and make it available to the view as <code>$object</code> (using the equivalent of <code>$this-&gt;set('object', $object)</code>).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -60,8 +60,7 @@
 <span class="cp">&lt;?php</span>
 <span class="c1">// views/venues/show.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span>
-</code></pre></div>
+<span class="x">&lt;h2&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h2&gt;</span></code></pre></div>
 
 
 </div>

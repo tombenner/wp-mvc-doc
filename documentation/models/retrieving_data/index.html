@@ -49,7 +49,7 @@
 
 <p>The <code>find()</code> method is the all-purpose method for retrieving data from a model.  It takes a single argument, an associative array of options for the find.  Here's an example that shows the available options (it isn't a practical example, though):</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/events_controller.php</span>
 <span class="k">class</span> <span class="nc">EventsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -73,8 +73,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <h4>joins</h4>
@@ -97,7 +96,7 @@
 
 <p>An array of conditions for the WHERE part of the query.  Conditions are joined with an AND by default, but OR conditions can be done like this:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Find all Events that are active or are happening on or after today</span>
 <span class="nv">$objects</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Event</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
   <span class="s1">&#39;conditions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -107,8 +106,7 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>To group conditions together, use an <code>'AND'</code> or <code>'OR'</code> in the same way that the <code>'OR'</code> above is used.</p>
@@ -129,7 +127,7 @@
 
 <p>An integer specifying the number of results per page.  This is only relevant when the <code>page</code> option is also set.<div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/find_one.html">View alone</a><h3>find_one</h3></div>This behaves almost identically to <code>find()</code>, except that it only returns a single object instead of an array of objects.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
   <span class="k">public</span> <span class="k">function</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
@@ -141,8 +139,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/find_by_id.html">View alone</a><h3>find_by_id</h3></div>
@@ -150,7 +147,7 @@
 
 <p>This behaves almost identically to <code>find()</code>, except that it has two arguments: the first is an id, the second is the options array that <code>find()</code> uses.  It finds the record with a primary key value of the specified id, but also handles the options array in the same way that <code>find()</code> does.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
   <span class="k">public</span> <span class="k">function</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
@@ -161,8 +158,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/find_by__.html">View alone</a><h3>find_by_*</h3></div>
@@ -172,11 +168,10 @@
 
 <p>For example, if Event has a column <code>venue_id</code>:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$event_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Event&#39;</span><span class="p">);</span>
 <span class="nv">$events</span> <span class="o">=</span> <span class="nv">$event_model</span><span class="o">-&gt;</span><span class="na">find_by_venue_id</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/find_one_by__.html">View alone</a><h3>find_one_by_*</h3></div>
@@ -186,11 +181,10 @@
 
 <p>For example, if Event has a column <code>venue_id</code>:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$event_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Event&#39;</span><span class="p">);</span>
 <span class="nv">$event</span> <span class="o">=</span> <span class="nv">$event_model</span><span class="o">-&gt;</span><span class="na">find_one_by_venue_id</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/paginate.html">View alone</a><h3>paginate</h3></div>
@@ -198,7 +192,7 @@
 
 <p><code>paginate()</code> is similar to <code>find()</code>, but it adds some functionality that is useful for creating paginated retrievals of data.  It returns a "collection," which is an array that contains the returned objects in the 'objects' key, but also contains information that is useful for creating pagination (total number of results, number of results per page, etc).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">EventsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
 
   <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
@@ -213,8 +207,7 @@
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/count.html">View alone</a><h3>count</h3></div>
@@ -222,7 +215,7 @@
 
 <p>Returns the number of records matching the query (using a <code>COUNT()</code> MySQL query).</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$total_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
 <span class="nv">$public_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
@@ -230,8 +223,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/max.html">View alone</a><h3>max</h3></div>
@@ -239,7 +231,7 @@
 
 <p>Returns the maximum value of the column (using a <code>MAX()</code> MySQL query).  An optional second argument can be used to specify conditions or other query qualifiers.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// If the Venue table has columns &#39;event_count&#39; and &#39;is_public&#39;:</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$max_event_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="s1">&#39;event_count&#39;</span><span class="p">);</span>
@@ -248,8 +240,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/min.html">View alone</a><h3>min</h3></div>
@@ -257,7 +248,7 @@
 
 <p>Returns the minimum value of the column (using a <code>MIN()</code> MySQL query).  An optional second argument can be used to specify conditions or other query qualifiers.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// If the Venue table has columns &#39;event_count&#39; and &#39;is_public&#39;:</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$min_event_count</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">min</span><span class="p">(</span><span class="s1">&#39;event_count&#39;</span><span class="p">);</span>
@@ -266,8 +257,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/sum.html">View alone</a><h3>sum</h3></div>
@@ -275,7 +265,7 @@
 
 <p>Returns the sum of the values of a column (using a <code>SUM()</code> MySQL query).  An optional second argument can be used to specify conditions or other query qualifiers.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// If the Venue table has columns &#39;event_count&#39; and &#39;is_public&#39;:</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$event_count_sum</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">sum</span><span class="p">(</span><span class="s1">&#39;event_count&#39;</span><span class="p">);</span>
@@ -284,8 +274,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/retrieving_data/average.html">View alone</a><h3>average</h3></div>
@@ -293,7 +282,7 @@
 
 <p>Returns the average of the values of a column (using a <code>AVERAGE()</code> MySQL query).  An optional second argument can be used to specify conditions or other query qualifiers.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// If the Venue table has columns &#39;event_count&#39; and &#39;is_public&#39;:</span>
 <span class="nv">$venue_model</span> <span class="o">=</span> <span class="nx">mvc_model</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 <span class="nv">$event_count_average</span> <span class="o">=</span> <span class="nv">$venue_model</span><span class="o">-&gt;</span><span class="na">average</span><span class="p">(</span><span class="s1">&#39;event_count&#39;</span><span class="p">);</span>
@@ -302,8 +291,7 @@
     <span class="s1">&#39;is_public&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span>
   <span class="p">)</span>
 <span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

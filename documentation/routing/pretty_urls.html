@@ -54,7 +54,7 @@
 
 <p>Here's an example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="c1">// models/documentation_node.php</span>
 
@@ -64,7 +64,7 @@
     <span class="nv">$slug</span> <span class="o">=</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span>
     <span class="nv">$slug</span> <span class="o">=</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="s1">&#39;/[^\w]/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="nv">$slug</span><span class="p">);</span>
     <span class="nv">$slug</span> <span class="o">=</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="s1">&#39;/[-]+/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="nv">$slug</span><span class="p">);</span>
-    <span class="nv">$slug</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$slug</span><span class="p">);</span>
+    <span class="nv">$slug</span> <span class="o">=</span> <span class="nb">strtolower</span><span class="p">(</span><span class="nv">$slug</span><span class="p">);</span>
     <span class="k">return</span> <span class="s1">&#39;documentation/&#39;</span><span class="o">.</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">id</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$slug</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="p">;</span>
   <span class="p">}</span>
   
@@ -74,8 +74,7 @@
 
 <span class="nx">MvcRouter</span><span class="o">::</span><span class="na">public_connect</span><span class="p">(</span><span class="s1">&#39;documentation/{:id:[\d]+}.*&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;documentation_nodes&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;show&#39;</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>That's it! You will now be able to browse to URLs like <code>/documentation/65/pretty-urls/</code>, and whenever you pass an object to one of the methods in the HTML helper (e.g. <code>$this-&gt;html-&gt;object_link($object, array('controller' =&gt; 'object_nodes'))</code>) and MvcRouter, the URL that's returned will automatically use the <code>to_url()</code> method you defined.</p>

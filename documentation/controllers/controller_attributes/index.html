@@ -51,7 +51,7 @@
 
 <p>For example, here's how to always run <code>set_venues()</code> before every action in EventsController:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">EventsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$before</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;set_venues&#39;</span><span class="p">);</span>
@@ -63,8 +63,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_attributes/after.html">View alone</a><h3>after</h3></div>
@@ -74,7 +73,7 @@
 
 <p>For example, here's how to always run <code>set_venues()</code> after every action in EventsController:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">EventsController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$after</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;set_venues&#39;</span><span class="p">);</span>
@@ -86,8 +85,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_attributes/default_searchable_fields.html">View alone</a><h3>default_searchable_fields</h3></div>
@@ -95,7 +93,7 @@
 
 <p>This can be set to determine what fields are used in searches within the administrative interface (in an admin controller) or in the default search functionality of a public controller.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">AdminVenuesController</span> <span class="k">extends</span> <span class="nx">MvcAdminController</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$default_columns</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -106,15 +104,14 @@
   <span class="k">var</span> <span class="nv">$default_searchable_fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <h3>Including fields from associated models</h3>
 
 <p>To search fields from associated models, you'll need to set list those models in <code>default_search_joins</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Event belongs_to Venue and has_and_belongs_to_many Speakers</span>
 
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
@@ -144,8 +141,7 @@
   <span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_attributes/default_search_joins.html">View alone</a><h3>default_search_joins</h3></div>
@@ -153,7 +149,7 @@
 
 <p>This can be set to make searches in the administrative interface or in the default public search include the specified associations as joins.  This is helpful if you'd like to include fields from associations in <code>default_searchable_fields</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Event belongs_to Venue and has_and_belongs_to_many Speakers</span>
 
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
@@ -183,8 +179,7 @@
   <span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/controllers/controller_attributes/default_columns.html">View alone</a><h3>default_columns</h3></div>
@@ -201,7 +196,7 @@
 </ol>
 
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">AdminEventsController</span> <span class="k">extends</span> <span class="nx">MvcAdminController</span> <span class="p">{</span>
   
   <span class="k">var</span> <span class="nv">$default_search_joins</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Speaker&#39;</span><span class="p">,</span> <span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
@@ -227,8 +222,7 @@
   <span class="p">}</span>
   
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

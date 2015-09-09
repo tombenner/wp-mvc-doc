@@ -46,14 +46,13 @@
   <h2>No Associated Custom Post Type</h2>
   <p>Setting <code>$wp_post = true;</code> will automatically create and update a post for each venue; the posts will have a <code>post_type</code> value of '<code>mvc_venue</code>', but there won't be a <a href="http://codex.wordpress.org/Post_Types#Custom_Types">Custom Post Type</a> for venues.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$wp_post</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The post of each venue can then be accessed using <code>$venue-&gt;post</code>, and this will have all of the columns of <code>wp_posts</code> as attributes (e.g. <code>$venue-&gt;post-&gt;post_title</code> returns the post's title).</p>

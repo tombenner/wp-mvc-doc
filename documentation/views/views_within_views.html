@@ -46,31 +46,28 @@
   <h2>Views Within Views</h2>
   <p>To render a view within a view, use <code>$this-&gt;render_view()</code>.  For example, to render a view named <code>_tree.php</code> in the views directory of the current controller:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_view</span><span class="p">(</span><span class="s1">&#39;_tree&#39;</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>To render a view from a specific directory, specify the path:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_view</span><span class="p">(</span><span class="s1">&#39;documentation_nodes/_tree&#39;</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>To pass variables into the view, use:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// index.php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_view</span><span class="p">(</span><span class="s1">&#39;_tree&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;locals&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;objects&#39;</span> <span class="o">=&gt;</span> <span class="nv">$tree_objects</span><span class="p">)));</span>
 
 <span class="c1">// _tree.php</span>
 <span class="c1">// This will print_r() the $tree_objects that was set in index.php</span>
 <span class="nb">print_r</span><span class="p">(</span><span class="nv">$objects</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>There is a naming convention that views that are used as partials (i.e. small, basic views that are only rendered inside of larger views) should have file names that are prefixed with an underscore (like the <code>_tree.php</code> above).  (This convention is borrowed from Rails.)</p>

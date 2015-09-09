@@ -51,14 +51,13 @@
 
 <p>If you set this value, you'll most likely want to include the token <code>{prefix}</code>at the beginning of the string, which will be replaced with the current value of $wpdb->prefix.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;{prefix}my_venues&#39;</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/database.html">View alone</a><h3>database</h3></div>
@@ -66,14 +65,13 @@
 
 <p>If you're using multiple databases under the same MySQL connection, you can specify that a model's table is in a database other than the primary WordPress database using <code>$database</code>.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$database</span> <span class="o">=</span> <span class="s1">&#39;shared_database&#39;</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/includes.html">View alone</a><h3>includes</h3></div>
@@ -81,7 +79,7 @@
 
 <p>To include associated models by default in SELECT queries, set <code>$includes</code> to an array of model names for which associations have already been defined.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$belongs_to</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
@@ -94,8 +92,7 @@
   <span class="k">var</span> <span class="nv">$includes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">,</span> <span class="s1">&#39;Speaker&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/order.html">View alone</a><h3>order</h3></div>
@@ -103,14 +100,13 @@
 
 <p>This can be used to set the default order that is used in SELECT queries.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$order</span> <span class="o">=</span> <span class="s1">&#39;Venue.name ASC, Venue.id ASC&#39;</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/display_field.html">View alone</a><h3>display_field</h3></div>
@@ -118,7 +114,7 @@
 
 <p>The name of the field which will be used to textually represent an object in various functions that assume that such a field is available.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// models/venue.php:</span>
 
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
@@ -131,8 +127,7 @@
 
 <span class="c1">// The following will output an anchor tag that uses $object-&gt;name for its text.</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">venue_link</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The <code>display_field</code> value will always be available in the <code>__name</code> property of an object (<code>$object-&gt;__name</code>), allowing you to represent an object textually without knowing exactly what property should be used.</p>
@@ -141,7 +136,7 @@
 
 <p>Note that fields that are set in <code>after_find()</code> can also be used for <code>display_field</code>, in case the displayed value should be something other than the value of a specific column.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
   
@@ -165,8 +160,7 @@
   
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/primary_key.html">View alone</a><h3>primary_key</h3></div>
@@ -174,7 +168,7 @@
 
 <p>The name of the field which will be used as the primary key of an object.  The default value is <code>'id'</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
@@ -182,8 +176,7 @@
 
 <span class="p">}</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/selects.html">View alone</a><h3>selects</h3></div>
@@ -191,14 +184,13 @@
 
 <p>By default, all of the columns of a model's table will be retrieved in a SELECT query, but you can change this default behavior by specifying an array of columns to select in <code>$select</code>.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$selects</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/per_page.html">View alone</a><h3>per_page</h3></div>
@@ -206,14 +198,13 @@
 
 <p>The default number of results per page that are returned when paginate() is called on the model.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Venue</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$per_page</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <div class="doc-child-header"><a class="doc-child-link" href="/documentation/models/model_attributes/hide_menu.html">View alone</a><h3>hide_menu</h3></div>
@@ -221,7 +212,7 @@
 
 <p>Each model shows up as an <a href="http://codex.wordpress.org/Administration_Menus">Administration Menu</a> by default, by you can disable this menu by setting <code>hide_menu</code> to <code>false</code>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
  
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
  
@@ -229,8 +220,7 @@
  
 <span class="p">}</span>
  
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>For information on customizing Administration Menus, see <a class="documentation-link" href="/documentation/configuration/adminpages.html">AdminPages</a>.</p>

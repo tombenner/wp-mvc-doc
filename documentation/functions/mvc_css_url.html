@@ -46,7 +46,7 @@
   <h2>mvc_css_url</h2>
   <p>This returns the URL of a CSS style sheet that's in the specified plugin's <code>app/public/</code> directory.  If a file extension isn't given, a <code>.css</code> is appended, but this automatic behavior can be bypassed by setting the <code>add_extension</code> option to <code>false</code>, as shown below.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// This will return a URL that looks like the following:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/css/my_style.css</span>
 <span class="k">echo</span> <span class="nx">mvc_css_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_style&#39;</span><span class="p">);</span>
@@ -54,8 +54,7 @@
 <span class="c1">// This will prevent the &quot;.css&quot; from being appended:</span>
 <span class="c1">// http://mysite.com/wp-content/plugins/events-calendar-example/app/public/css/my_style</span>
 <span class="k">echo</span> <span class="nx">mvc_css_url</span><span class="p">(</span><span class="s1">&#39;events-calendar-example&#39;</span><span class="p">,</span> <span class="s1">&#39;my_style&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;add_extension&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

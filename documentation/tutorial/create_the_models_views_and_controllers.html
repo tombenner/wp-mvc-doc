@@ -54,7 +54,7 @@
 
 <p>The generated code only uses the <code>name</code> column, so let's add fields to the <code>add</code> and <code>edit</code> forms for the other columns.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// app/views/admin/venues/add.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 
@@ -69,13 +69,12 @@
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;style&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;width: 40px;&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;style&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;width: 80px;&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">(</span><span class="s1">&#39;Add&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">(</span><span class="s1">&#39;Add&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// app/views/admin/venues/edit.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 
@@ -92,15 +91,14 @@
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;style&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;width: 40px;&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;style&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;width: 80px;&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">(</span><span class="s1">&#39;Update&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">form</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">(</span><span class="s1">&#39;Update&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <h4>Modify the public views</h4>
 
 <p>Let's display the venue address and a link to its website in the public <code>show</code> view.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// app/views/venues/show.php</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 
@@ -120,8 +118,7 @@
 
 <span class="x">&lt;p&gt;</span>
 <span class="x">  </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">(</span><span class="s1">&#39;All Venues&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">&lt;/p&gt;</span>
-</code></pre></div>
+<span class="x">&lt;/p&gt;</span></code></pre></div>
 
 
 <p>That's it!  You can now begin to add venues in the admin section in Venues > Add New, edit them, view them at public-facing URLs like /venue/1/, and see a paginated list of them at /venues/.</p>

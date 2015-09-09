@@ -50,29 +50,27 @@
 
 <p>The default public layout is:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
 <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_main_view</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
-<span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>The default admin layout is:</p>
 
-<div class="highlight"><pre><code class="php"><span class="x">&lt;div class=&quot;wrap&quot;&gt;</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">&lt;div class=&quot;wrap&quot;&gt;</span>
 
 <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">display_flash</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
 <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_main_view</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
-<span class="x">&lt;/div&gt;</span>
-</code></pre></div>
+<span class="x">&lt;/div&gt;</span></code></pre></div>
 
 
 <p>You can use any code in a layout that you would use in a view.  For example, we could render a couple of views in addition to the main view:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nx">get_header</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 
 <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render_view</span><span class="p">(</span><span class="s1">&#39;_search_form&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
 
@@ -92,8 +90,7 @@
 
 <span class="x">&lt;/div&gt;</span>
 
-<span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">&lt;?php</span> <span class="nx">get_footer</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

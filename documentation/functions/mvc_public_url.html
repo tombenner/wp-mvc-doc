@@ -46,7 +46,7 @@
   <h2>mvc_public_url</h2>
   <p>This returns a URL the corresponds to the routing options that are passed to it.  For example:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/venues/</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">));</span>
 
@@ -56,27 +56,24 @@
 <span class="c1">// http://mysite.com/venues/my_action/1</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;my_action&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">));</span>
 
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Ideally, for <code>'show'</code> actions, you would pass an object, as this allows <a class="documentation-link" href="/documentation/routing/pretty_urls.html">Pretty URLs</a> to be used if <a class="documentation-link" href="/documentation/models/model_methods/to_url.html"><code>to_url()</code></a> is defined in the model:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// http://mysite.com/documentation/5/creating-database-tables/</span>
 <span class="nv">$documentation_node_model</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DocumentationNode</span><span class="p">();</span>
 <span class="nv">$documentation_node</span> <span class="o">=</span> <span class="nv">$documentation_node_model</span><span class="o">-&gt;</span><span class="na">find_by_id</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nx">mvc_public_url</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;object&#39;</span> <span class="o">=&gt;</span> <span class="nv">$documentation_node</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>Note: If you are looking to make a link to a MVC page from within an MVC page, you may want to use <a class="documentation-link" href="/documentation/helpers/core_helpers/html.html">the HTML helper's <code>link()</code> method</a>:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">html</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">(</span><span class="s1">&#39;All Venues&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;venues&#39;</span><span class="p">))</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

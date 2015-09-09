@@ -46,14 +46,13 @@
   <h2>Belongs To</h2>
   <p>To define one or more belongs to associations, set the <code>belongs_to</code> property.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$belongs_to</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Venue&#39;</span><span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 <p>In this example, the events table should have a <code>venue_id</code> column, which will be used as the foreign key.</p>
@@ -62,7 +61,7 @@
 
 <p>A custom foreign key can also be defined:</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">class</span> <span class="nc">Event</span> <span class="k">extends</span> <span class="nx">MvcModel</span> <span class="p">{</span>
 
   <span class="k">var</span> <span class="nv">$belongs_to</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -72,8 +71,7 @@
   <span class="p">);</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>

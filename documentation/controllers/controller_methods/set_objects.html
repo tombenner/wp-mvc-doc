@@ -48,7 +48,7 @@
 
 <p><code>set_objects()</code> will handle pagination behind the scenes.  If a URL param named <code>page</code> (or in an admin action a URL named <code>page_num</code>) is set, <code>set_objects()</code> will use that to properly paginate the collection.  It also calls <code>$this-&gt;set_pagination($collection);</code>, which will allow for <a class="documentation-link" href="/documentation/views/view_methods/pagination.html">pagination links to be displayed in the view</a>.</p>
 
-<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// controllers/venues_controller.php</span>
 <span class="k">class</span> <span class="nc">VenuesController</span> <span class="k">extends</span> <span class="nx">MvcPublicController</span> <span class="p">{</span>
   
@@ -61,8 +61,7 @@
 <span class="c1">// views/venues/index.php</span>
 <span class="c1">// This will print_r() all of the retrieve objects</span>
 <span class="nb">print_r</span><span class="p">(</span><span class="nv">$objects</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
 
 </div>
