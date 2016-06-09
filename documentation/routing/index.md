@@ -41,6 +41,12 @@ MvcRouter::admin_ajax_connect(array('controller' => 'admin_documentation_nodes',
 ?>
 {% endhighlight %}
 
+<div class="note warning">
+  <h5>Why do my routes not work?</h5>
+  <p>After routes have been added or changed it is neccessary to clear the URL rewrite cache of WordPress to set up the new routes in the database. As this process can be very performance intensive you are required to perform it manually.</p>
+  <p>This can either be done by disabling and reactivating your plugin or by saving the permalink setting in the backend.</p>
+</div>
+
 The second `admin_ajax_connect()` call above allows for an AJAX call like the following to be made:
 
 {% highlight js %}

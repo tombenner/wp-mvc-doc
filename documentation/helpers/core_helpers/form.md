@@ -56,14 +56,25 @@ $formatted_time = preg_replace('/:00$/', '', $object->time);
 ### Methods
 
 #### create($model_name, $options=array())
+
 #### end($label='Submit')
+
 #### input($field_name, $options=array())
+
 #### text_input($field_name, $options=array())
+
 #### textarea_input($field_name, $options=array())
+
 #### checkbox_input($field_name, $options=array())
+
 #### hidden_input($field_name, $options=array())
+
 #### select($field_name, $options=array())
+
 #### select_tag($field_name, $options=array())
+
 #### button($text, $options=array())
+
 #### belongs_to_dropdown($model_name, $select_options, $options=array())
+
 #### has_many_dropdown($model_name, $select_options, $options=array())

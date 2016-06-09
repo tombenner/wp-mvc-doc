@@ -9,10 +9,11 @@ To delete all records that match given conditions, use `delete_all()`.
 class Event extends MvcModel {
   
   public function delete_past_events() {
-    $this->delete_all( array(
-            'conditions' =>  array('date <' => date('Y-m-d')
-                ))
-    );
+    $this->delete_all(array(
+      'conditions' => array(
+        'date <' => date('Y-m-d')
+      )
+    ));
   }
   
 }

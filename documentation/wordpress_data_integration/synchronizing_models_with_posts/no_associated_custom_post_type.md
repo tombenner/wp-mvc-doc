@@ -12,3 +12,4 @@ class Venue extends MvcModel {
 {% endhighlight %}
 
 The post of each venue can then be accessed using `$venue->post`, and this will have all of the columns of `wp_posts` as attributes (e.g. `$venue->post->post_title` returns the post's title).
+
